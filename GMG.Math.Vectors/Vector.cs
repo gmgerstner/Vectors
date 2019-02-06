@@ -4,6 +4,18 @@ namespace GMG.Math.Vectors
 {
     public class Vector
     {
+        public Vector()
+        {
+            //default
+        }
+
+        public Vector(double X, double Y, double Z)
+        {
+            this.X = X;
+            this.Y = Y;
+            this.Z = Z;
+        }
+
         public double X { get; set; }
         public double Y { get; set; }
         public double Z { get; set; }
