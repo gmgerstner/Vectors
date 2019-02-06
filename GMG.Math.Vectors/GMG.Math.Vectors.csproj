@@ -5,7 +5,11 @@
     <Authors>George M. Gerstner</Authors>
     <Company>GMG Digital Technologies</Company>
     <Description>Vector math logic</Description>
-    <Copyright>2019</Copyright>
+    <Copyright>Copyright 2019</Copyright>
+    <RepositoryUrl>https://gmgerstner.visualstudio.com/Vectors/_git/Vectors</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageProjectUrl>https://gmgerstner.visualstudio.com/Vectors</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
