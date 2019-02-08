@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GMG.Math.Vectors.Tests
 {
@@ -76,7 +75,9 @@ namespace GMG.Math.Vectors.Tests
             var th = v1.Theta;
 
             //assert
-            Assert.IsTrue(th == System.Math.PI / 2);
+            var val = System.Math.Abs(th - System.Math.PI / 2);
+            val = System.Math.Round(val, 5);//close enough?
+            Assert.IsTrue(val == 0);
         }
 
         [TestMethod]
@@ -89,7 +90,9 @@ namespace GMG.Math.Vectors.Tests
             var phi = v1.Phi;
 
             //assert
-            Assert.IsTrue(phi == System.Math.PI / 4);
+            var val = System.Math.Abs(phi - System.Math.PI / 4);
+            val = System.Math.Round(val, 5);//close enough?
+            Assert.IsTrue(val == 0);
         }
 
         [TestMethod]
@@ -108,7 +111,6 @@ namespace GMG.Math.Vectors.Tests
             var val = expected.CrossProduct(actual).Magnitude();
             val = System.Math.Round(val, 5);//close enough?
             Assert.IsTrue(val == 0);
-           //Assert.AreEqual(expected, actual);
         }
     }
 }
