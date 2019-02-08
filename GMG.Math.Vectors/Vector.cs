@@ -77,9 +77,6 @@ namespace GMG.Math.Vectors
             return vector;
         }
 
-        //https://en.wikipedia.org/wiki/Spherical_coordinate_system
-        //https://en.wikipedia.org/wiki/File:3D_Spherical.svg
-
         public double Theta
         {
             get
