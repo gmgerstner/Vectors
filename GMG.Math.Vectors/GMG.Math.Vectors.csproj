@@ -10,6 +10,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageProjectUrl>https://gmgerstner.visualstudio.com/Vectors</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
 </Project>

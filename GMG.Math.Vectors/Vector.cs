@@ -2,7 +2,7 @@
 
 namespace GMG.Math.Vectors
 {
-    public class Vector
+    public partial class Vector
     {
         public Vector()
         {
@@ -108,6 +108,16 @@ namespace GMG.Math.Vectors
                 Z = z
             };
             return v;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Vector)) return false;
+            var vector = (Vector)obj;
+            if (vector.X != X) return false;
+            if (vector.Y != Y) return false;
+            if (vector.Z != Z) return false;
+            return true;
         }
     }
 }

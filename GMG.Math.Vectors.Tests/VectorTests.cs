@@ -112,5 +112,105 @@ namespace GMG.Math.Vectors.Tests
             val = System.Math.Round(val, 5);//close enough?
             Assert.IsTrue(val == 0);
         }
+
+        [TestMethod]
+        public void Plus()
+        {
+            //arrange
+            var a = new Vector(1, 1, 1);
+            var b = new Vector(2, 2, 2);
+            var c = new Vector(3, 3, 3);
+
+            //act
+            var d = a + b;
+
+            //assert
+            Assert.AreEqual(c, d);
+        }
+
+        [TestMethod]
+        public void Multiply()
+        {
+            //arrange
+            var a = 3.0;
+            var b = new Vector(2, 2, 2);
+            var c = new Vector(6, 6, 6);
+
+            //act
+            var d = a * b;
+            var e = b * a;
+
+            //assert
+            Assert.AreEqual(c, d);
+            Assert.AreEqual(c, e);
+        }
+
+        [TestMethod]
+        public void Divide()
+        {
+            //arrange
+            var a = 2.0;
+            var b = new Vector(2, 2, 2);
+            var c = new Vector(1, 1, 1);
+
+            //act
+            var d = b / a;
+
+            //assert
+            Assert.AreEqual(c, d);
+        }
+
+        [TestMethod]
+        public void Equals()
+        {
+            //arrange
+            var a = new Vector(2, 2, 2);
+            var b = new Vector(1, 1, 1);
+            var c = new Vector(1, 1, 1);
+
+            //act
+            var isNotSame = (a == b);
+            var isSame = (b == c);
+
+            //assert
+            Assert.AreEqual(false, isNotSame);
+            Assert.AreEqual(true, isSame);
+        }
+
+        [TestMethod]
+        public void GetIndexer()
+        {
+            //arrange
+            var a = new Vector(10, 20, 30);
+            //act
+            var x = a[0];
+            var y = a[1];
+            var z = a[2];
+
+            //assert
+            Assert.AreEqual(x, a.X);
+            Assert.AreEqual(y, a.Y);
+            Assert.AreEqual(z, a.Z);
+        }
+
+        [TestMethod]
+        public void SetIndexer()
+        {
+            //arrange
+            var a = new Vector();
+            var x = 100;
+            var y = 200;
+            var z = 300;
+
+            //act
+            a[0] = x;
+            a[1] = y;
+            a[2] = z;
+
+            //assert
+            Assert.AreEqual(x, a.X);
+            Assert.AreEqual(y, a.Y);
+            Assert.AreEqual(z, a.Z);
+        }
     }
 }
