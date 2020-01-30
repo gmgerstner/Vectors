@@ -15,6 +15,28 @@ namespace GMG.Math.Vectors
             return resultant;
         }
 
+        public static Vector operator -(Vector left, Vector right)
+        {
+            var resultant = new Vector
+            {
+                X = left.X - right.X,
+                Y = left.Y - right.Y,
+                Z = left.Z - right.Z
+            };
+            return resultant;
+        }
+
+        public static Vector operator -(Vector right)
+        {
+            var resultant = new Vector
+            {
+                X = - right.X,
+                Y = - right.Y,
+                Z = - right.Z
+            };
+            return resultant;
+        }
+
         public static Vector operator *(double left, Vector right)
         {
             var resultant = new Vector

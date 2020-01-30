@@ -129,6 +129,35 @@ namespace GMG.Math.Vectors.Tests
         }
 
         [TestMethod]
+        public void Subtract()
+        {
+            //arrange
+            var a = new Vector(1, 1, 1);
+            var b = new Vector(2, 2, 2);
+            var c = new Vector(3, 3, 3);
+
+            //act
+            var d = c - b;
+
+            //assert
+            Assert.AreEqual(a, d);
+        }
+
+        [TestMethod]
+        public void Negative()
+        {
+            //arrange
+            var a = new Vector(1, 2, 3);
+            var b = new Vector(-1, -2, -3);
+
+            //act
+            var d = -a;
+
+            //assert
+            Assert.AreEqual(b, d);
+        }
+
+        [TestMethod]
         public void Multiply()
         {
             //arrange
